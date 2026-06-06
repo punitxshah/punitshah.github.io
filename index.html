@@ -1,124 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Punit Shah</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #111;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Punit Shah</title>
 
-    nav {
-      margin-bottom: 40px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    nav a {
-      margin-right: 20px;
-      text-decoration: none;
-      color: #555;
-      font-weight: 500;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
 
-    nav a:hover {
-      color: black;
-    }
+body {
+  background: #0b0b0b;
+  color: #ffffff;
+  line-height: 1.6;
+}
 
-    h1 { font-size: 42px; margin-bottom: 5px; }
-    h2 { margin-top: 50px; }
-    p { margin: 10px 0; }
-    ul { padding-left: 20px; }
-    .sub { color: #555; }
-  </style>
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: rgba(11,11,11,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* SECTIONS */
+section {
+  min-height: 100vh;
+  padding: 120px 15% 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ddd;
+  font-weight: 400;
+}
+
+p {
+  color: #aaa;
+  font-size: 16px;
+  max-width: 700px;
+}
+
+/* HERO */
+.hero {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #222;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #444;
+  transform: translateY(-3px);
+}
+
+/* TAGS */
+.tag {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+  margin-top: 10px;
+  color: #bbb;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  section {
+    padding: 100px 8%;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <nav>
+  <a href="#home">Home</a>
   <a href="#about">About</a>
-  <a href="#achievements">Achievements</a>
   <a href="#experience">Experience</a>
-  <a href="#expertise">Expertise</a>
-  <a href="#entrepreneurial">Entrepreneurial</a>
-  <a href="#education">Education</a>
+  <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
 
-<h1>Punit Shah</h1>
-<p class="sub">Payments & Digital Assets Leader | J.P. Morgan</p>
-<p class="sub">London, UK · <a href="https://linkedin.com" target="_blank">LinkedIn</a></p>
+<section id="home">
+  <div class="hero">Punit Shah</div>
+  <h2>Banking • Payments • Blockchain • Fintech</h2>
+  <p>
+    I work in global banking focusing on payments innovation, blockchain infrastructure,
+    and institutional digital asset adoption.
+  </p>
+</section>
 
-<h2 id="about">About</h2>
-<p>
-Commercial and strategic leader with 18+ years’ experience across investment banking, payments and digital assets.
-Leads Growth & Client Success for Kinexys across EMEA, driving client origination, strategic partnerships and large-scale platform adoption among asset managers and financial institutions.
-Recognised for bridging traditional financial markets with emerging digital asset infrastructure, combining deep domain expertise with an entrepreneurial mindset and strong commercial acumen.
-</p>
+<section id="about">
+  <h1>About</h1>
+  <p>
+    I am based in London working at a global U.S. bank in payments and digital assets.
+    My focus is on blockchain-based settlement, tokenised deposits, and next-generation
+    financial infrastructure.
+  </p>
 
-<h2 id="achievements">Selected Achievements</h2>
-<ul>
-  <li>Scaled Kinexys from early-stage blockchain product to established platform across EMEA markets</li>
-  <li>Grew ARR from ~$500k to ~$10mm through institutional adoption</li>
-  <li>Expanded client base from single digits to high double-digit institutional clients</li>
-  <li>Delivered $3trn+ total payment volume (TPV) with ~$5bn daily flows</li>
-  <li>Recognised industry voice across digital assets through panels and conferences</li>
-</ul>
+  <div class="grid">
+    <div class="card">
+      <h2>Focus Areas</h2>
+      <span class="tag">Payments</span>
+      <span class="tag">Blockchain</span>
+      <span class="tag">Digital Assets</span>
+      <span class="tag">Institutional Finance</span>
+    </div>
 
-<h2 id="experience">Professional Experience</h2>
+    <div class="card">
+      <h2>Interests</h2>
+      <span class="tag">Fintech</span>
+      <span class="tag">Startups</span>
+      <span class="tag">Markets</span>
+      <span class="tag">Innovation</span>
+    </div>
+  </div>
+</section>
 
-<p><strong>J.P. Morgan</strong><br>
-EMEA Head of Growth & Client Success – Kinexys (2022–Present)</p>
-<ul>
-  <li>Lead EMEA commercial growth for blockchain-based payments platform</li>
-  <li>Own senior client relationships across asset managers, fintechs and financial institutions</li>
-  <li>Drive revenue through solution-led sales and structured use cases</li>
-  <li>Expand wallet share and deepen strategic partnerships</li>
-  <li>Influence product direction and go-to-market strategy</li>
-  <li>Represent J.P. Morgan at global fintech and digital asset forums</li>
-</ul>
+<section id="experience">
+  <h1>Experience</h1>
 
-<p><strong>J.P. Morgan</strong><br>
-Global E-Trading Infrastructure Program Manager (2014–2022)</p>
-<ul>
-  <li>Led multi-million-dollar global transformation programs</li>
-  <li>Delivered ultra-low latency trading enhancements across asset classes</li>
-  <li>Oversaw governance, risk and regulatory frameworks across EMEA</li>
-</ul>
+  <div class="grid">
+    <div class="card">
+      <h2>Global Bank</h2>
+      <p>Payments & Blockchain (Kinexys)</p>
+      <p style="font-size:13px; color:#777;">
+        Working on institutional blockchain infrastructure and digital settlement solutions.
+      </p>
+    </div>
 
-<p><strong>Nomura</strong> – Direct Market Access (2011–2014)</p>
-<ul>
-  <li>Managed low-latency trading infrastructure across exchanges</li>
-  <li>Architected co-location platform and optimisation initiatives</li>
-</ul>
+    <div class="card">
+      <h2>Previous Roles</h2>
+      <p>Corporate Banking / Payments Advisory</p>
+      <p style="font-size:13px; color:#777;">
+        Worked with multinational clients on treasury, payments, and onboarding.
+      </p>
+    </div>
+  </div>
+</section>
 
-<p><strong>Société Générale</strong> – Trading Technology (2004–2011)</p>
-<ul>
-  <li>Progressed from graduate to leadership roles across trading systems</li>
-  <li>Delivered global projects and front-office support</li>
-</ul>
+<section id="projects">
+  <h1>Projects</h1>
 
-<h2 id="expertise">Core Expertise</h2>
-<p>
-Revenue Growth & Commercial Strategy · Client Origination & Expansion · Payments & Transaction Banking · Blockchain & Digital Assets · Strategic Partnerships · Financial Markets Infrastructure · Go-to-Market Strategy · Stakeholder Leadership
-</p>
+  <div class="grid">
+    <div class="card">
+      <h2>Blockchain Settlement</h2>
+      <p>Exploring tokenised cash and real-time settlement rails.</p>
+    </div>
 
-<h2 id="entrepreneurial">Entrepreneurial</h2>
-<p>
-Active property investor with a diversified portfolio, applying capital allocation, risk management and long-term value creation strategies. Brings an entrepreneurial mindset and commercial discipline alongside corporate leadership responsibilities.
-</p>
+    <div class="card">
+      <h2>Fintech Research</h2>
+      <p>Analysis of digital asset adoption across global banks.</p>
+    </div>
+  </div>
+</section>
 
-<h2 id="education">Education & Certifications</h2>
-<p>
-BSc (Hons) Computer Science – University of Hertfordshire<br>
-Prince2 Practitioner · ITIL v3 · Agile Project Management
-</p>
-
-<h2 id="contact">Contact</h2>
-<p>Email: punitshah@hotmail.co.uk</p>
+<section id="contact">
+  <h1>Contact</h1>
+  <p>Email: yourname@email.com</p>
+  <p>LinkedIn: linkedin.com/in/yourprofile</p>
+</section>
 
 </body>
 </html>
